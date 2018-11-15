@@ -2,7 +2,7 @@ import alcohol
 import averageMark
 
 def getInput():
-    print("1: meet dronkenheid  \n2: bereken gemiddelde \n3: option \n4: option \n")
+    print("1: meet dronkenheid  \n2: bereken gemiddelde \n")
     number = None
     while number is None:
         try:
@@ -33,16 +33,8 @@ def option2():
     if average is not None:
         print(average)
 
-def option3():
-    print("option3")
-
-def option4():
-    print("option4")
-
 options = {1 : option1,
-           2 : option2,
-           3 : option3,
-           4 : option4,
+           2 : option2
 }
 
 #get the users choice
