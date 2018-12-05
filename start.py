@@ -1,9 +1,13 @@
+#import nessecary functions
 import alcohol
 import averageMark
 
+#Define input function
 def getInput():
+    #Ask for option
     print("1: meet dronkenheid  \n2: bereken gemiddelde \n")
     number = None
+    #Try to get input, if the user does not enter a number, print message and try again
     while number is None:
         try:
             number = int(input("voer het nummer van een optie in:"))
@@ -11,7 +15,9 @@ def getInput():
         except ValueError:
             print("Voer alstublieft een nummer in.")
 
+#Define the different options
 def option1():
+    #Get drunkenness and depending on number print output
     drunkenness = alcohol.getDrunkenness()
     print("")
     if drunkenness <= 0.5:
@@ -26,12 +32,14 @@ def option1():
         print("zat \nbij uitkomst 7,6 tot 13  raken al je zintuigen verdoofd. \nAlles wat je hoort en ziet dringt nauwelijks tot je door. ")
     elif drunkenness >= 13.1:
         print("Laveloos \nalles boven de 13,1 vertraagt je ademhaling en je polsslag zo erg dat je kans hebt bewusteloos te raken.\nJe kunt ook in een coma raken en zelfs doodgaan omdat je ademhaling stopt.")
+    
     print("\nGlazen per uur: " + str(drunkenness))
 
 def option2():
     average = averageMark.getAverage()
     if average is not None:
         print(average)
+
 
 options = {1 : option1,
            2 : option2
@@ -43,7 +51,6 @@ number = getInput()
 print("\n")
 
 #catch exception when user enters unsupported input
-
 try:
     options[number]()
 except KeyError:
