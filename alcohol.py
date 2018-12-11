@@ -39,11 +39,3 @@ def getDrunkenness():
     #number = normalbeer + strongbeer + shotje + wine
     drunkenness = total/time
     return drunkenness
-
-#
-#
-#
-#
-#
-#
-#
