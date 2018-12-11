@@ -11,7 +11,7 @@ def getDrinkNumber(alcohol):
 def getDrunkenness():
 
     #Get number of drinks a person has drunk
-    glasses = getDrinkNumber("glazen alcohol")
+    glasses = getDrinkNumber("glazen met alcohol")
     #strongbeer = getDrinkNumber("sterk bier")
 
     #beer = getDrinkNumber("beer")
